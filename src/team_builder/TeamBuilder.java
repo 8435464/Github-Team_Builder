@@ -18,4 +18,24 @@ public class TeamBuilder {
         // TODO code application logic here
     }
     
+    public void showteam() {
+        
+        InputOutput.output("Welcome to the Team Builder System");
+        InputOutput.output("========================");
+        InputOutput.output("How many members are there in the team?");
+        InputOutput.output("Select one of the following actions:");
+        InputOutput.output("a) List all the books in the bookstore");
+        InputOutput.output("b) Add a book to the bookstore");
+        InputOutput.output("c) Sort books by price (descending)");
+        InputOutput.output("d) Sort books by price (ascending)");
+        InputOutput.output("e) Find book with title");
+        InputOutput.output("f) Sort books by author name");
+        InputOutput.output("g) Sort books by Title");
+        InputOutput.output("h) Change inventory");
+        InputOutput.output("i) Search by author");
+        InputOutput.output("j) Exit");
+        InputOutput.output("");
+        InputOutput.output("");
+}
+    
 }
