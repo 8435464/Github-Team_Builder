@@ -10,5 +10,13 @@ package team_builder;
  * @author ZhaoZiqi
  */
 public class Member {
+    int i;
+    String name;
+    String surname;
+    char sex;
+    int date;
+    int month;
+    int year;
     
+    Member[] teamMembers = new Member [i];
 }
