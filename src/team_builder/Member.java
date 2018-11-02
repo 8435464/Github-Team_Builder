@@ -17,6 +17,5 @@ public class Member {
     int date;
     int month;
     int year;
-    
     Member[] teamMembers = new Member [i];
 }
