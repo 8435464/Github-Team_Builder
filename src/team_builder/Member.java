@@ -28,5 +28,9 @@ public class Member {
         this.year = year;
     }
 
+    public String getName(){
+        return this.name;
+    }
+    
     Member[] teamMembers = new Member[i];
 }
