@@ -26,20 +26,20 @@ public class TeamBuilder {
             InputOutput.output("");
             int indexSeperator = member.indexOf(":");
             String name = member.substring(0, indexSeperator);
-            member = member.substring(indexSeperator + l, member.length());
+            member = member.substring(indexSeperator + 1, member.length());
 
             indexSeperator = member.indexOf(":");
             String surname = member.substring(0, indexSeperator);
-            member = member.substring(indexSeperator + l, member.length());
+            member = member.substring(indexSeperator + 1, member.length());
             indexSeperator = member.indexOf(":");
             char sex = member.charAt(0);
-            member = member.substring(indexSeperator + l, member.length());
+            member = member.substring(indexSeperator + 1, member.length());
             indexSeperator = member.indexOf("/");
             String dateString = member.substring(0, indexSeperator);
-            member = member.substring(indexSeperator + l, member.length());
+            member = member.substring(indexSeperator + 1, member.length());
             indexSeperator = member.indexOf("/");
             String monthString = member.substring(0, indexSeperator);
-            member = member.substring(indexSeperator + l, member.length());
+            member = member.substring(indexSeperator + 1, member.length());
             String yearString = member.substring(0, member.length());
             Integer dateinteger = new Integer(dateString);
             Integer monthinteger = new Integer(monthString);
@@ -95,7 +95,6 @@ public class TeamBuilder {
     }
 
     public static String oldest(Member[] teamMembers) {
-//initialization.
 
         int max = 0;
         int oldest = 0;
@@ -109,7 +108,7 @@ public class TeamBuilder {
             }
         }
         int age = (2011 - teamMembers[oldest].getYear());
-        String toReturn = teamMembers[oldest].getName() + " " + teamMembers[oldest].getSurname() + ", age " +
+        String toReturn = teamMembers[oldest].getName() + " " + teamMembers[oldest].getSurname() + ", age " +"";
         return toReturn;
     }
 
