@@ -19,7 +19,6 @@ public class Member {
     int month;
     int year;
 
-
     public Member(String name, String surname, char sex, int date, int month, int year) {
         this.name = name;
         this.surname = surname;
@@ -27,6 +26,30 @@ public class Member {
         this.date = date;
         this.month = month;
         this.year = year;
+    }
+
+    public String getName() {
+        return this.getName();
+    }
+
+    public String getSurname() {
+        return this.getSurname();
+    }
+
+    public String getSex() {
+        return this.getSex();
+    }
+
+    public String getDate() {
+        return this.getDate();
+    }
+
+    public String getMonth() {
+        return this.getMonth();
+    }
+
+    public String getYear() {
+        return this.getYear();
     }
 
     Member[] teamMembers = new Member[i];
