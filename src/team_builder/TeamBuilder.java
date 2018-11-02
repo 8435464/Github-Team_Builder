@@ -23,7 +23,7 @@ public class TeamBuilder {
         InputOutput.output("Welcome to the Team Builder System");
         InputOutput.output("========================");
         InputOutput.output("How many members are there in the team?");
-        InputOutput.output("Select one of the following actions:");
+        InputOutput.output("Input the team members (Name:Surname:Sex:DD/MM/YYYY):");
         InputOutput.output("a) List all the books in the bookstore");
         InputOutput.output("b) Add a book to the bookstore");
         InputOutput.output("c) Sort books by price (descending)");
