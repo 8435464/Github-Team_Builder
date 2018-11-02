@@ -126,7 +126,7 @@ public abstract class InputOutput {
 		return result;
 	}
 
-	static int inputInt(String id_) {
+	static int inputint(String id_) {
 		throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
 																		// Tools | Templates.
 	}
