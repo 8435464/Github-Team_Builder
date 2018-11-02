@@ -60,21 +60,18 @@ public class TeamBuilder {
             InputOutput.output("2) Find the oldest member");
             InputOutput.output("3) Find the youngest member");
             selection = InputOutput.inputint("");
-            switch (selection) {
-                case 1:
-                    InputOutput.output("");
-                    outputTeamMembers(teamMembers);
-                    break;
-                case 2:
-                    InputOutput.output("The oldest member is: " + oldest(teamMembers));
-                    break;
-                case 3:
-                    InputOutput.output("The youngest member is: " + youngest(teamMembers));
-                default:
-                    break;
-            }
-
         }
-
+        switch (selection) {
+            case 1:
+                InputOutput.output("");
+                outputTeamMembers(teamMembers);
+                break;
+            case 2:
+                InputOutput.output("The oldest member is: " + oldest(teamMembers));
+                break;
+            case 3:
+                InputOutput.output("The youngest member is: " + youngest(teamMembers));
+            default:
+                break;
+        }
     }
-}

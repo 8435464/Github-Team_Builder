@@ -55,7 +55,7 @@ public abstract class InputOutput {
 
 	static int inputInt() {
 
-		return inputInt("");
+		return inputint("");
 	}
 
 	static double inputDouble() {

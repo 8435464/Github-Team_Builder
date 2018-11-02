@@ -10,6 +10,7 @@ package team_builder;
  * @author ZhaoZiqi
  */
 public class Member {
+
     int i;
     String name;
     String surname;
@@ -17,6 +18,15 @@ public class Member {
     int date;
     int month;
     int year;
-    
-    Member[] teamMembers = new Member [i];
+
+    public Member(String name, String surname, char sex, int date, int month, int year) {
+        this.name = name;
+        this.surname = surname;
+        this.sex = sex;
+        this.date = date;
+        this.month = month;
+        this.year = year;
+    }
+
+    Member[] teamMembers = new Member[i];
 }
