@@ -11,7 +11,7 @@ package team_builder;
  */
 public class Member {
 
-    int i;
+    
     String name;
     String surname;
     char sex;
@@ -52,8 +52,5 @@ public class Member {
     public int getYear() {
         return this.getYear();
     }
-
-
-    Member[] teamMembers = new Member[i];
 
 }
