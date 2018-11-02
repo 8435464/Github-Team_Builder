@@ -1,19 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package team_builder;
 
-/**
- *
- * @author che8435464
- */
 public class TeamBuilder {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
 
         InputOutput.output("Welcome to the Team Builder System");
@@ -92,14 +80,14 @@ public class TeamBuilder {
     }
 
     public static void outputTeamMembers(Member[] teamMembers) {
-        for (int i = 0; i < teamMembers.length; i++) {
-            String name = teamMembers[i].getName();
-            String surname = teamMembers[i].getSurname();
-            char sex = teamMembers[i].getSex();
-            int date = teamMembers[i].getDate();
-            int month = teamMembers[i].getMonth();
-            int year = teamMembers[i].getYear();
+        for (Member teamMember : teamMembers) {
+            String name = teamMember.getName();
+            String surname = teamMember.getSurname();
             
+            char sex = teamMember.getSex();
+            int date = teamMember.getDate();
+            int month = teamMember.getMonth();
+            int year = teamMember.getYear();
             String sLong;
             
             if (sex == 'm') {
@@ -117,6 +105,7 @@ public class TeamBuilder {
         int oldest = 0;
         
         for (int i = 0; i < teamMembers.length; i++) {
+            
             int age = (2011 - teamMembers[i].getYear());
             
             if (age > max) {
