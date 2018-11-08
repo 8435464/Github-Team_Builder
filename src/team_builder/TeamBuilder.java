@@ -6,17 +6,17 @@ public class TeamBuilder {
 
         InputOutput.output("Welcome to the Team Builder System");
         InputOutput.output(" =========== ");
-        int i = InputOutput.inputint("How many members are in the team? ");
-        
+        int i = InputOutput.inputInt("How many members are in the team? ");
+
         Member[] teamMembers = new Member[i];
-        
+
         InputOutput.output("Input the team members (Name:Surname:Sex:DD/MM/YYYY) :");
-        
+
         for (int j = 0; j < i; j++) {
-            
+
             String member = InputOutput.input();
             InputOutput.output("");
-            
+
             int indexSeperator = member.indexOf(":");
             String name = member.substring(0, indexSeperator);
             member = member.substring(indexSeperator + 1, member.length());
@@ -24,33 +24,33 @@ public class TeamBuilder {
             indexSeperator = member.indexOf(":");
             String surname = member.substring(0, indexSeperator);
             member = member.substring(indexSeperator + 1, member.length());
-            
+
             indexSeperator = member.indexOf(":");
             char sex = member.charAt(0);
             member = member.substring(indexSeperator + 1, member.length());
-            
+
             indexSeperator = member.indexOf("/");
             String dateString = member.substring(0, indexSeperator);
             member = member.substring(indexSeperator + 1, member.length());
-            
+
             indexSeperator = member.indexOf("/");
             String monthString = member.substring(0, indexSeperator);
             member = member.substring(indexSeperator + 1, member.length());
-            
+
             String yearString = member.substring(0, member.length());
-            
+
             Integer dateinteger = new Integer(dateString);
             Integer monthinteger = new Integer(monthString);
             Integer yearinteger = new Integer(yearString);
-            
+
             int date = dateinteger.intValue();
             int month = monthinteger.intValue();
             int year = yearinteger.intValue();
-            
+
             teamMembers[j] = new Member(name, surname, sex, date, month, year);
         }
         int selection = 0;
-        
+
         while (selection != 1 && selection != 2 && selection != 3) {
             InputOutput.output("");
             InputOutput.output("Team Builder Menu: ");
@@ -60,10 +60,10 @@ public class TeamBuilder {
             InputOutput.output("l) List the team members");
             InputOutput.output("2) Find the oldest member");
             InputOutput.output("3) Find the youngest member");
-            
+
             selection = InputOutput.inputint("");
         }
-        
+
         switch (selection) {
             case 1:
                 InputOutput.output("");
@@ -83,13 +83,13 @@ public class TeamBuilder {
         for (Member teamMember : teamMembers) {
             String name = teamMember.getName();
             String surname = teamMember.getSurname();
-            
+
             char sex = teamMember.getSex();
             int date = teamMember.getDate();
             int month = teamMember.getMonth();
             int year = teamMember.getYear();
             String sLong;
-            
+
             if (sex == 'm') {
                 sLong = "male";
             } else {
@@ -103,11 +103,11 @@ public class TeamBuilder {
 
         int max = 0;
         int oldest = 0;
-        
+
         for (int i = 0; i < teamMembers.length; i++) {
-            
+
             int age = (2011 - teamMembers[i].getYear());
-            
+
             if (age > max) {
                 max = age;
                 oldest = i;

@@ -84,7 +84,7 @@ public abstract class InputOutput {
 		return result;
 	}
 
-	static int inputlnt(String prompt) {
+	static int inputInt(String prompt) {
 		int result = 0;
 		try {
 			result = Integer.valueOf(input(prompt).trim()).intValue();
