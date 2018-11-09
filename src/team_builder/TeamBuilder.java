@@ -51,7 +51,7 @@ public class TeamBuilder {
         }
         int selection = 0;
 
-        while (selection != 1 && selection != 2 && selection != 3) {
+        while (selection != 4) {
             InputOutput.output("");
             InputOutput.output("Team Builder Menu: ");
             InputOutput.output("");
@@ -60,26 +60,32 @@ public class TeamBuilder {
             InputOutput.output("1) List the team members");
             InputOutput.output("2) Find the oldest member");
             InputOutput.output("3) Find the youngest member");
+            InputOutput.output("4) Exit");
 
             selection = InputOutput.inputInt("");
+
+            switch (selection) {
+                case 1:
+                    InputOutput.output("");
+                    outputTeamMembers(teamMembers);
+
+                case 2:
+                    InputOutput.output("The oldest member is: " + oldest(teamMembers));
+
+                case 3:
+                    InputOutput.output("The youngest member is: " + youngest(teamMembers));
+
+                case 4:
+                    break;
+                default:
+                    break;
+            }
         }
 
-        switch (selection) {
-            case 1:
-                InputOutput.output("");
-                outputTeamMembers(teamMembers);
-                break;
-            case 2:
-                InputOutput.output("The oldest member is: " + oldest(teamMembers));
-                break;
-            case 3:
-                InputOutput.output("The youngest member is: " + youngest(teamMembers));
-            default:
-                break;
-        }
     }
 
     public static void outputTeamMembers(Member[] teamMembers) {
+
         for (Member teamMember : teamMembers) {
             String name = teamMember.getName();
             String surname = teamMember.getSurname();
@@ -101,18 +107,32 @@ public class TeamBuilder {
 
     public static String oldest(Member[] teamMembers) {
 
-        int max = 0;
+        int year;
+        int month;
+        int date;
+
         int oldest = 0;
 
-        for (int i = 0; i < teamMembers.length; i++) {
+        //int max = 0;
+        for (int i = 1; i < teamMembers.length; i++) {
 
-            int age = (2018 - teamMembers[i].getYear());
+            //int age = (2018 - teamMembers[i].getYear());
+            year = teamMembers[0].getYear();
+            month = teamMembers[0].getMonth();
+            date = teamMembers[0].getDate();
 
-            if (age > max) {
-                max = age;
+            if (teamMembers[i].getYear() < year) {
+                year = teamMembers[i].getYear();
+                oldest = i;
+            } else if (teamMembers[i].getYear() == year && teamMembers[i].getMonth() < month) {
+                month = teamMembers[i].getMonth();
+                oldest = i;
+            } else if (teamMembers[i].getMonth() == month && teamMembers[i].getDate() < date) {
+                date = teamMembers[i].getDate();
                 oldest = i;
             }
         }
+
         int age = (2018 - teamMembers[oldest].getYear());
 
         String toReturn = teamMembers[oldest].getName() + " " + teamMembers[oldest].getSurname() + ", age " + age;
@@ -122,16 +142,32 @@ public class TeamBuilder {
 
     public static String youngest(Member[] teamMembers) {
 
-        int min = 999;
+        int year;
+        int month;
+        int date;
+
         int youngest = 0;
-        for (int i = 0; i < teamMembers.length; i++) {
-            int age = (2011 - teamMembers[i].getYear());
-            if (age < min) {
-                min = age;
+
+        //int max = 0;
+        for (int i = 1; i < teamMembers.length; i++) {
+
+            //int age = (2018 - teamMembers[i].getYear());
+            year = teamMembers[0].getYear();
+            month = teamMembers[0].getMonth();
+            date = teamMembers[0].getDate();
+
+            if (teamMembers[i].getYear() > year) {
+                year = teamMembers[i].getYear();
+                youngest = i;
+            } else if (teamMembers[i].getYear() == year && teamMembers[i].getMonth() > month) {
+                month = teamMembers[i].getMonth();
+                youngest = i;
+            } else if (teamMembers[i].getMonth() == month && teamMembers[i].getDate() > date) {
+                date = teamMembers[i].getDate();
                 youngest = i;
             }
         }
-        int age = (2011 - teamMembers[youngest].getYear());
+        int age = (2018 - teamMembers[youngest].getYear());
         String toReturn = teamMembers[youngest].getName() + "/" + teamMembers[youngest].getSurname() + age + "/" + age;
         return toReturn;
     }
