@@ -54,8 +54,7 @@ public abstract class InputOutput {
 	}
 
 	static int inputInt() {
-
-		return inputint("");
+		return inputInt("");
 	}
 
 	static double inputDouble() {
@@ -126,10 +125,9 @@ public abstract class InputOutput {
 		return result;
 	}
 
-	static int inputint(String id_) {
-		throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
-																		// Tools | Templates.
-	}
+	//static int inputInt(String id_) {
+		//throw new UnsupportedOperationException("Not supported yet."); 							// Tools | Templates.
+	///}
         
         
 }

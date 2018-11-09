@@ -61,7 +61,7 @@ public class TeamBuilder {
             InputOutput.output("2) Find the oldest member");
             InputOutput.output("3) Find the youngest member");
 
-            selection = InputOutput.inputint("");
+            selection = InputOutput.inputInt("");
         }
 
         switch (selection) {
