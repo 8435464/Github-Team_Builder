@@ -57,7 +57,7 @@ public class TeamBuilder {
             InputOutput.output("");
             InputOutput.output("=========");
             InputOutput.output("");
-            InputOutput.output("l) List the team members");
+            InputOutput.output("1) List the team members");
             InputOutput.output("2) Find the oldest member");
             InputOutput.output("3) Find the youngest member");
 
@@ -106,14 +106,14 @@ public class TeamBuilder {
 
         for (int i = 0; i < teamMembers.length; i++) {
 
-            int age = (2011 - teamMembers[i].getYear());
+            int age = (2018 - teamMembers[i].getYear());
 
             if (age > max) {
                 max = age;
                 oldest = i;
             }
         }
-        int age = (2011 - teamMembers[oldest].getYear());
+        int age = (2018 - teamMembers[oldest].getYear());
 
         String toReturn = teamMembers[oldest].getName() + " " + teamMembers[oldest].getSurname() + ", age " + age;
 

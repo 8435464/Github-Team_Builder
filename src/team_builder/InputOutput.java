@@ -124,10 +124,5 @@ public abstract class InputOutput {
 
 		return result;
 	}
-
-	//static int inputInt(String id_) {
-		//throw new UnsupportedOperationException("Not supported yet."); 							// Tools | Templates.
-	///}
-        
         
 }
