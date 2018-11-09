@@ -19,27 +19,27 @@ public class Member {
     }
 
     public String getName() {
-        return this.getName();
+        return this.name;
     }
 
     public String getSurname() {
-        return this.getSurname();
+        return this.surname;
     }
 
     public char getSex() {
-        return this.getSex();
+        return this.sex;
     }
 
     public int getDate() {
-        return this.getDate();
+        return this.date;
     }
 
     public int getMonth() {
-        return this.getMonth();
+        return this.month;
     }
 
     public int getYear() {
-        return this.getYear();
+        return this.year;
     }
 
 }
