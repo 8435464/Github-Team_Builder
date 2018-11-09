@@ -53,6 +53,7 @@ public class TeamBuilder {
 
         while (selection != 4) {
             InputOutput.output("");
+            InputOutput.output("");
             InputOutput.output("Team Builder Menu: ");
             InputOutput.output("");
             InputOutput.output("=========");
@@ -64,22 +65,17 @@ public class TeamBuilder {
 
             selection = InputOutput.inputInt("");
 
-            switch (selection) {
-                case 1:
-                    InputOutput.output("");
-                    outputTeamMembers(teamMembers);
-
-                case 2:
-                    InputOutput.output("The oldest member is: " + oldest(teamMembers));
-
-                case 3:
-                    InputOutput.output("The youngest member is: " + youngest(teamMembers));
-
-                case 4:
-                    break;
-                default:
-                    break;
+            if (selection == 1) {
+                InputOutput.output("");
+                outputTeamMembers(teamMembers);
+            } else if (selection == 2) {
+                InputOutput.output("The oldest member is: " + oldest(teamMembers));
+            } else if (selection == 3) {
+                InputOutput.output("The youngest member is: " + youngest(teamMembers));
+            } else if (selection == 4) {
+                break;
             }
+
         }
 
     }
